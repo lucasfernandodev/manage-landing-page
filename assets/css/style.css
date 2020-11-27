@@ -262,3 +262,46 @@ header, section, footer{
     margin: 25px 0;
     color: var(--Dark-Blue);
 }
+
+
+
+/* Simplify */
+.simplify{
+    width: 100%;
+    background: var(--Bright-Red);
+    color: var(--Vary-Light-Gray);
+    height: 220px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../img/bg-simplify-section-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: 165px;
+    background-position-y: bottom;
+    background-size: 105%;
+}
+
+.simplify .title{
+    font-size: 3.6rem;
+    line-height: 1.2em;
+    display: block;
+    font-weight: 700;
+    color: var(--Vary-Light-Gray);
+    max-width: 420px;
+
+}
+
+.simplify .btn-inverted{
+    width: 140px;
+    height: 45px;
+    color: var(--Bright-Red);
+    font-family: 'Be Vietnam', sans-serif;
+    background: var(--Vary-Light-Gray);
+    border-radius: 45px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(255, 239, 235, 0.3);
+}
