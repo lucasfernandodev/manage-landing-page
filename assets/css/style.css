@@ -28,6 +28,7 @@ body{
 
 header, section, footer{
     padding: 0 165px;
+    color: var(--Dark-Grayish-Blue);
 }
 
 /* HEADER */
@@ -85,17 +86,15 @@ header, section, footer{
 .hero{
     width: 100%;
     height: calc(100vh - 90px);
-    color: var(--Dark-Grayish-Blue);
-
     display: flex;
     flex-direction: row;
 }
+
 .hero article{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 .hero .info{
     width: 45vw
@@ -108,7 +107,6 @@ header, section, footer{
     display: block;
     font-weight: 700;
     color: var(--Dark-Blue);
-
 }
 
 .hero .info .subtitle{
@@ -119,15 +117,96 @@ header, section, footer{
 }
 
 
-
 .hero .graphic{
     align-items: flex-end;
     width: 65vw
 }
 
 .hero .graphic .graphic-image{
-
     width: 100%;
     max-width: 390px;
     height: auto;
+}
+
+
+
+/* ABOUT */
+.about{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 124px;
+}
+
+.about article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .info{
+    width: 45vw;
+    justify-content: flex-start;
+}
+
+.about .info .title{
+    font-size: 4.9rem;
+    line-height: 1.2em;
+    max-width: 420px;
+    display: block;
+    font-weight: 700;
+    color: var(--Dark-Blue);
+}
+
+.about .info .subtitle{
+    font-size: 1.6rem;
+    margin: 2.5rem 0;
+    display: inline-block;
+    max-width: 340px;
+}
+
+.about .list{
+    width: 65vw;
+    align-items: flex-end;
+}
+
+.about .menu-list{
+    max-width: 485px;
+    list-style: none;
+
+}
+
+.about .menu-list .menu-item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.about .menu-list .menu-item .order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70px;
+    background: var(--Bright-Red);
+    color: var(--Vary-Light-Gray);
+    height: 40px;
+    border-radius: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.about .menu-list .menu-item .title{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: var(--Dark-Blue);
+    margin-bottom: 15px;
+}
+
+.about .menu-list .menu-item .subtitle{
+    padding-left: 100px;
 }
