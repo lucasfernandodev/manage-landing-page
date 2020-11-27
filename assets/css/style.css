@@ -210,3 +210,55 @@ header, section, footer{
 .about .menu-list .menu-item .subtitle{
     padding-left: 100px;
 }
+
+
+
+/* Experience */
+
+.experience{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 180px;
+}
+
+.experience > .title{
+    font-size: 4.9rem;
+    line-height: 1.2em;
+    display: block;
+    font-weight: 700;
+    color: var(--Dark-Blue);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.experience  .users{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.experience  .users .card-user{
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.experience  .users .card-user .card-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.experience  .users .card-user .title{
+    margin: 25px 0;
+    color: var(--Dark-Blue);
+}
