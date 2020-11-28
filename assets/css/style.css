@@ -59,7 +59,7 @@ header, section, footer{
 }
 
 .header .header-nav .nav-menu .menu-item .menu-link:hover{
-    text-decoration: underline;
+    color: var(--Dark-Grayish-Blue)
 }
 
 .btn{
@@ -219,7 +219,6 @@ header, section, footer{
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     padding-bottom: 180px;
 }
@@ -236,21 +235,30 @@ header, section, footer{
 
 .experience  .users{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 100px;
+    overflow: hidden;
 }
 
-.experience  .users .card-user{
+.experience  .users .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.experience  .users .container .card-user{
+    min-width: 410px;
     max-width: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex-shrink: unset;
+    margin: 0 25px;
+    min-height: 220px;
 }
 
-.experience  .users .card-user .card-image{
+.experience  .users .container .card-user .card-image{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -258,10 +266,49 @@ header, section, footer{
 
 }
 
-.experience  .users .card-user .title{
+.experience  .users .container.card-user .title{
     margin: 25px 0;
     color: var(--Dark-Blue);
 }
+
+.experience .button{
+    margin: 0 auto;
+}
+
+/* Controle */
+
+.experience .users{
+    position: relative;
+}
+
+.experience .left,
+.experience .right{
+    display: flex;
+    align-items: stretch;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    cursor: default;
+    opacity: .5;
+    z-index: 1000s;
+}
+
+
+.experience .left{
+    left: 0;
+    top: 0;
+}
+
+.experience .right{
+    right: 0;
+    top: 0;
+}
+
+/* </Controle */
+
+
+
+
 
 
 
@@ -304,4 +351,137 @@ header, section, footer{
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(255, 239, 235, 0.3);
+}
+
+
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 250px;
+    background: var(--Very-Dark-Blue);
+    color: var(--Vary-Light-Gray);
+
+    display: flex;
+    align-items: center;
+}
+
+.footer .container{
+    padding: 0; /* Remove o padding padão do da section que foi definida no inicio */
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.footer .container .footer-nav{
+    flex-grow: 1;
+}
+
+.footer .container article, .footer .container nav{
+    max-height: 100%;
+    min-width: 250px;
+}
+
+.footer .container .social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer .container .social .menu-social{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footer .container .social .menu-social .menu-item{
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+.footer .container .social .menu-social .menu-item:nth-child(1){
+    margin-left: 0;
+}
+
+.footer .container .social .menu-social .menu-item:hover svg path{
+    fill: var(--Bright-Red);
+}
+
+.footer .footer-nav .nav-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: space-between;
+    align-content: space-between;
+    width: 100%;
+    max-width: 330px;
+}
+
+.footer .footer-nav .nav-menu .menu-item{
+    margin: 3.5px 0px;
+}
+
+
+.footer .footer-nav .nav-menu .menu-item .menu-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--Vary-Light-Gray);
+}
+
+.footer .footer-nav .nav-menu .menu-item:hover .menu-link{
+    color: var(--Bright-Red);
+}
+
+.footer .conversion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footer .conversion .form-conversion .field-input{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .conversion .form-conversion .field-input input{
+    width: 200px;
+    height: 45px;
+    border-radius: 45px;
+    margin-right: 8px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    color: var(--Bright-Red);
+}
+
+.footer .conversion .form-conversion .field-input .btn-go{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Bright-Red);
+    color: var(--Vary-Light-Gray);
+    height: 45px;
+    width: 65px;
+    border-radius: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+}
+
+.footer .conversion .form-conversion .field-input .btn-go:hover{
+    filter: brightness(170%);
+    /* opacity: 0.8; */
+}
+
+.footer .conversion .Copyright{
+    font-size: 1.2rem;
 }
