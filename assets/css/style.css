@@ -1,3 +1,6 @@
+/******************************/
+/* ROOT
+**************/
 *,*::before,*::after{
     padding: 0;
     margin: 0;
@@ -6,7 +9,6 @@
 }
 
 :root{
-
     --Bright-Red: hsl(12, 88%, 59%);
     --Dark-Blue: hsl(228, 39%, 23%);
 
@@ -24,14 +26,77 @@ body{
     font-family: 'Be Vietnam', sans-serif;
     font-size: 1.6em;
     font-weight: 400;
-}
-
-header, section, footer{
-    padding: 0 165px;
     color: var(--Dark-Grayish-Blue);
 }
 
-/* HEADER */
+header, 
+section, 
+footer{
+    padding: 0 165px;
+
+}
+
+
+button{
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+a, svg *{
+    transition: all 500ms ease-in-out;
+}
+
+.btn{
+    width: 140px;
+    height: 45px;
+    background: var(--Bright-Red);
+    color: var(--Vary-Light-Gray);
+    border-radius: 45px;
+    box-shadow: 0 4px 20px 2px rgba(242, 95, 58, 0.4);
+}
+
+.btn::before{
+    content: "";
+    width: inherit;
+    height: inherit;
+
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    border-radius: inherit;
+    display: block;
+    transition: all 500ms ease-in-out;
+}
+
+.btn:hover::before{
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.4);
+}
+
+.btn.btn-inverted{
+    color: var(--Bright-Red);
+    background: var(--Vary-Light-Gray);
+    box-shadow: 0 4px 6px rgba(255, 239, 235, 0.3);
+}
+
+.no-shadow, 
+.no-shadow::before, 
+.no-shadow::after{
+    box-shadow: none !important;
+}
+
+.no-shadow:hover{
+    box-shadow: none !important; 
+}
+
+
+/******************************/
+/* HEADER
+**************/
 .header{
     width: 100%;;
     height: 95px;
@@ -62,27 +127,12 @@ header, section, footer{
     color: var(--Dark-Grayish-Blue)
 }
 
-.btn{
-    width: 140px;
-    height: 45px;
-    background: var(--Bright-Red);
-    font-family: 'Be Vietnam', sans-serif;
-    color: var(--Vary-Light-Gray);
-    border-radius: 45px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(242, 95, 58, 0.8);
-}
-
-.btn:hover{
-    filter: brightness(150%);
-    opacity: 0.8;
-}
 
 
 
-/* HERO */
+/******************************/
+/* HERO
+**************/
 .hero{
     width: 100%;
     height: calc(100vh - 90px);
@@ -130,7 +180,10 @@ header, section, footer{
 
 
 
-/* ABOUT */
+
+/******************************/
+/* ABOUT
+**************/
 .about{
     width: 100%;
     min-height: 600px;
@@ -213,8 +266,10 @@ header, section, footer{
 
 
 
-/* Experience */
 
+/******************************/
+/* EXPERIENCE
+**************/
 .experience{
     padding: 0;
     display: flex;
@@ -275,8 +330,8 @@ header, section, footer{
     margin: 0 auto;
 }
 
-/* Controle */
 
+/* CONTROLE SLIDER */
 .experience .users{
     position: relative;
 }
@@ -293,7 +348,6 @@ header, section, footer{
     z-index: 1000s;
 }
 
-
 .experience .left{
     left: 0;
     top: 0;
@@ -304,15 +358,12 @@ header, section, footer{
     top: 0;
 }
 
-/* </Controle */
 
 
 
-
-
-
-
-/* Simplify */
+/******************************/
+/* SIMPLIFY
+**************/
 .simplify{
     width: 100%;
     background: var(--Bright-Red);
@@ -340,22 +391,9 @@ header, section, footer{
 
 }
 
-.simplify .btn-inverted{
-    width: 140px;
-    height: 45px;
-    color: var(--Bright-Red);
-    font-family: 'Be Vietnam', sans-serif;
-    background: var(--Vary-Light-Gray);
-    border-radius: 45px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(255, 239, 235, 0.3);
-}
-
-
-
-/* FOOTER */
+/******************************/
+/* FOOTER
+**************/
 .footer{
     width: 100%;
     height: 250px;
@@ -477,10 +515,6 @@ header, section, footer{
     border: none;
 }
 
-.footer .conversion .form-conversion .field-input .btn-go:hover{
-    filter: brightness(170%);
-    /* opacity: 0.8; */
-}
 
 .footer .conversion .Copyright{
     font-size: 1.2rem;

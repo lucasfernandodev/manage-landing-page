@@ -66,19 +66,19 @@ const config_ = {
 
 // Movimento inicial
 controlLeft.addEventListener('mousemove', async () => {
-    if (chave === false) {    
-        const animationInitial = container.animate({marginLeft: `-${movimento}px`}, config_);   
+    if (chave === true) {    
+        const animationInitial = container.animate({marginLeft: `${0}px`}, config_);   
         await animationInitial.finished;
-        chave = true;
+        chave = false;
     }
 });
 
 
 // Movimento final
 controlRight.addEventListener('mousemove', async () => {
-    if (chave === true) {
-        const animationEnd = container.animate({marginLeft: `${0}px`}, config_);
+    if (chave === false) {
+        const animationEnd = container.animate({marginLeft: `-${movimento}px`}, config_);
         await animationEnd.finished;
-        chave = false;
+        chave = true;
     }
 });
