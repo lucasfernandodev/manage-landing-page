@@ -487,6 +487,8 @@ a, svg *{
 .footer .conversion .form-conversion .field-input{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .footer .conversion .form-conversion .field-input input{
@@ -513,8 +515,17 @@ a, svg *{
     cursor: pointer;
     box-shadow: none;
     border: none;
+   
 }
 
+.footer .conversion .form-conversion .field-input .invalid{
+    width: 63.5%;
+    display: none;
+    font-size: 1.0rem;
+    padding: 5px 15px;
+    font-style: italic;
+    color: #eb3b5a;
+}
 
 .footer .conversion .Copyright{
     font-size: 1.2rem;

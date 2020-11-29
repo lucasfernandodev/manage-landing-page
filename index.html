@@ -272,8 +272,10 @@
             <article class="conversion">
                 <form action="#" class="form-conversion">
                     <div class="field-input">
-                        <input type="text" class="input" placeholder="Updates in your inbox…">
+                        <input type="email" vaelue="@" class="input" placeholder="Updates in your inbox…" maxlength="60"
+                            size='65'>
                         <button type="submit" class="btn btn-go no-shadow">Go</button>
+                        <span class="invalid">Please insert a valid email</span>
                     </div>
                 </form>
 
@@ -285,6 +287,36 @@
 
 
     <script src="assets/js/carrocel.js"></script>
+    <script src="assets/js/validaFormulario.js"></script>
+
+    <script>
+        const erroMsg = document.querySelector('.invalid');
+
+        const btnForm = document.querySelector('.btn-go');
+        const inputFild = document.querySelector('.form-conversion input');
+
+        inputFild.addEventListener('keyup', () => {
+            const valor = validacaoEmail(inputFild.value)
+
+            if (valor) {
+                erroMsg.style.display = "none"
+            } else {
+                erroMsg.style.display = "block"
+            }
+        })
+
+        btnForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            const valor = validacaoEmail(inputFild.value)
+
+            if (valor) {
+                erroMsg.style.display = "none"
+            } else {
+                erroMsg.style.display = "block"
+            }
+        })
+
+    </script>
 </body>
 
 </html>
